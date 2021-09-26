@@ -77,7 +77,7 @@ crontab -r >/dev/null 2>&1
 	echo "@daily /bin/verifatt"
 	echo "@reboot /etc/autostart"
 	echo "* * * * * /etc/autostart"
-	echo "0 */6 * * * /bin/uexpired"
+	echo "*/30 * * * * /bin/uexpired"
 ) | crontab -
 echo "$_lvk" | sed -n '1 p' | cut -d' ' -f2 >/bin/versao && cat /bin/versao >/home/sshplus
 wget https://github.com/rodrigo12xd/SSHPLUS/raw/master/Install/jq-linux64 >/dev/null 2>&1
